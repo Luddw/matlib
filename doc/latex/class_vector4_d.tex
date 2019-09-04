@@ -1,0 +1,158 @@
+\hypertarget{class_vector4_d}{}\doxysection{Vector4D Class Reference}
+\label{class_vector4_d}\index{Vector4D@{Vector4D}}
+
+
+{\ttfamily \#include $<$matlib.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_vector4_d_a2b85bf633815254224596e09baa1a1ab}\label{class_vector4_d_a2b85bf633815254224596e09baa1a1ab}} 
+{\bfseries Vector4D} (float x, float y, float z, float w)
+\item 
+\mbox{\Hypertarget{class_vector4_d_ac4171483447c2a46e53fccf8401b59b8}\label{class_vector4_d_ac4171483447c2a46e53fccf8401b59b8}} 
+{\bfseries Vector4D} (\mbox{\hyperlink{class_vector4_d}{Vector4D}} \&o)
+\item 
+float \mbox{\hyperlink{class_vector4_d_a338f187b2ca1630ae3a8d090eb54d71c}{Dot\+Product}} (const \mbox{\hyperlink{class_vector4_d}{Vector4D}} \&vect4)
+\item 
+\mbox{\hyperlink{class_vector4_d}{Vector4D}} \mbox{\hyperlink{class_vector4_d_ad7742744afdc8545a19685c821b7ecee}{Cross\+Product}} (const \mbox{\hyperlink{class_vector4_d}{Vector4D}} \&vect4)
+\item 
+float \mbox{\hyperlink{class_vector4_d_ac519c2cb128da3b1250a14277d35057e}{Lenght\+Of}} ()
+\item 
+\mbox{\hyperlink{class_vector4_d}{Vector4D}} \mbox{\hyperlink{class_vector4_d_a2f6228b8ae7a6944bbf32f3b6a3cbd3f}{Normalize}} ()
+\item 
+\mbox{\hyperlink{class_vector4_d}{Vector4D}} \mbox{\hyperlink{class_vector4_d_a86eaef6a69a7fbf458805e262f085fc3}{operator+}} (const \mbox{\hyperlink{class_vector4_d}{Vector4D}} \&other)
+\item 
+\mbox{\hyperlink{class_vector4_d}{Vector4D}} \mbox{\hyperlink{class_vector4_d_a03994ced8a01c241a6eb615393253b41}{operator-\/}} (const \mbox{\hyperlink{class_vector4_d}{Vector4D}} \&other)
+\item 
+\mbox{\hyperlink{class_vector4_d}{Vector4D}} \mbox{\hyperlink{class_vector4_d_a9aea3938021deff20ddbfc71958ad064}{operator$\ast$}} (const float \&other)
+\item 
+\mbox{\hyperlink{class_vector4_d}{Vector4D}} \& \mbox{\hyperlink{class_vector4_d_a3f118f7416bd07cad14b4cb350c7b1f5}{operator=}} (const \mbox{\hyperlink{class_vector4_d}{Vector4D}} \&other)
+\item 
+bool \mbox{\hyperlink{class_vector4_d_a345fdb4bf3be296840b52c805dfaf82e}{operator==}} (const \mbox{\hyperlink{class_vector4_d}{Vector4D}} \&other)
+\item 
+bool \mbox{\hyperlink{class_vector4_d_a931343432514ecbb0d514fe354c65461}{operator!=}} (const \mbox{\hyperlink{class_vector4_d}{Vector4D}} \&other)
+\item 
+const float \& \mbox{\hyperlink{class_vector4_d_acab7e69f40a1beb076f64be51aa58850}{operator\mbox{[}$\,$\mbox{]}}} (int index) const
+\item 
+float \& \mbox{\hyperlink{class_vector4_d_abe4a99129f4601ba3712e516240c5f65}{operator\mbox{[}$\,$\mbox{]}}} (int index)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A 4-\/dimensional homogenous vector 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_vector4_d_ad7742744afdc8545a19685c821b7ecee}\label{class_vector4_d_ad7742744afdc8545a19685c821b7ecee}} 
+\index{Vector4D@{Vector4D}!CrossProduct@{CrossProduct}}
+\index{CrossProduct@{CrossProduct}!Vector4D@{Vector4D}}
+\doxysubsubsection{\texorpdfstring{CrossProduct()}{CrossProduct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector4_d}{Vector4D}} Vector4\+D\+::\+Cross\+Product (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector4_d}{Vector4D}} \&}]{vect4 }\end{DoxyParamCaption})}
+
+Performs crossproduct with another vector
+
+
+\begin{DoxyParams}{Parameters}
+{\em vect4} & \+: the 2nd vector used in the crossproduct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a new vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector4_d_a338f187b2ca1630ae3a8d090eb54d71c}\label{class_vector4_d_a338f187b2ca1630ae3a8d090eb54d71c}} 
+\index{Vector4D@{Vector4D}!DotProduct@{DotProduct}}
+\index{DotProduct@{DotProduct}!Vector4D@{Vector4D}}
+\doxysubsubsection{\texorpdfstring{DotProduct()}{DotProduct()}}
+{\footnotesize\ttfamily float Vector4\+D\+::\+Dot\+Product (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector4_d}{Vector4D}} \&}]{vect4 }\end{DoxyParamCaption})}
+
+Performs a dotproduction of two vectors
+
+
+\begin{DoxyParams}{Parameters}
+{\em vect4} & \+: the 2nd vector used in the dotproduct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a Scalar 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector4_d_ac519c2cb128da3b1250a14277d35057e}\label{class_vector4_d_ac519c2cb128da3b1250a14277d35057e}} 
+\index{Vector4D@{Vector4D}!LenghtOf@{LenghtOf}}
+\index{LenghtOf@{LenghtOf}!Vector4D@{Vector4D}}
+\doxysubsubsection{\texorpdfstring{LenghtOf()}{LenghtOf()}}
+{\footnotesize\ttfamily float Vector4\+D\+::\+Lenght\+Of (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calculates the lenght of a vector
+
+\begin{DoxyReturn}{Returns}
+Returns the lenght of the vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector4_d_a2f6228b8ae7a6944bbf32f3b6a3cbd3f}\label{class_vector4_d_a2f6228b8ae7a6944bbf32f3b6a3cbd3f}} 
+\index{Vector4D@{Vector4D}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!Vector4D@{Vector4D}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector4_d}{Vector4D}} Vector4\+D\+::\+Normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Normalizes the vector
+
+\begin{DoxyReturn}{Returns}
+Returns a new normalized vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector4_d_a931343432514ecbb0d514fe354c65461}\label{class_vector4_d_a931343432514ecbb0d514fe354c65461}} 
+\index{Vector4D@{Vector4D}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Vector4D@{Vector4D}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Vector4\+D\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector4_d}{Vector4D}} \&}]{other }\end{DoxyParamCaption})}
+
+Compares a vector with another vector. Checks if the two vectors are not the same. \begin{DoxyReturn}{Returns}
+True or False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector4_d_a9aea3938021deff20ddbfc71958ad064}\label{class_vector4_d_a9aea3938021deff20ddbfc71958ad064}} 
+\index{Vector4D@{Vector4D}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vector4D@{Vector4D}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector4_d}{Vector4D}} Vector4\+D\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const float \&}]{other }\end{DoxyParamCaption})}
+
+Allows multiplication with a vector and a number, Scalar \mbox{\Hypertarget{class_vector4_d_a86eaef6a69a7fbf458805e262f085fc3}\label{class_vector4_d_a86eaef6a69a7fbf458805e262f085fc3}} 
+\index{Vector4D@{Vector4D}!operator+@{operator+}}
+\index{operator+@{operator+}!Vector4D@{Vector4D}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector4_d}{Vector4D}} Vector4\+D\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector4_d}{Vector4D}} \&}]{other }\end{DoxyParamCaption})}
+
+Allows Addition between two vectors \mbox{\Hypertarget{class_vector4_d_a03994ced8a01c241a6eb615393253b41}\label{class_vector4_d_a03994ced8a01c241a6eb615393253b41}} 
+\index{Vector4D@{Vector4D}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Vector4D@{Vector4D}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector4_d}{Vector4D}} Vector4\+D\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector4_d}{Vector4D}} \&}]{other }\end{DoxyParamCaption})}
+
+Allows Subtraction between two vectors \mbox{\Hypertarget{class_vector4_d_a3f118f7416bd07cad14b4cb350c7b1f5}\label{class_vector4_d_a3f118f7416bd07cad14b4cb350c7b1f5}} 
+\index{Vector4D@{Vector4D}!operator=@{operator=}}
+\index{operator=@{operator=}!Vector4D@{Vector4D}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector4_d}{Vector4D}} \& Vector4\+D\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector4_d}{Vector4D}} \&}]{other }\end{DoxyParamCaption})}
+
+Allows assigning a vector with another vector \mbox{\Hypertarget{class_vector4_d_a345fdb4bf3be296840b52c805dfaf82e}\label{class_vector4_d_a345fdb4bf3be296840b52c805dfaf82e}} 
+\index{Vector4D@{Vector4D}!operator==@{operator==}}
+\index{operator==@{operator==}!Vector4D@{Vector4D}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Vector4\+D\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector4_d}{Vector4D}} \&}]{other }\end{DoxyParamCaption})}
+
+Compares a vector with another vector. Checks if the two vectors are the same. \begin{DoxyReturn}{Returns}
+True or False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector4_d_abe4a99129f4601ba3712e516240c5f65}\label{class_vector4_d_abe4a99129f4601ba3712e516240c5f65}} 
+\index{Vector4D@{Vector4D}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Vector4D@{Vector4D}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float \& Vector4\+D\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+Allows access to the vectors private data. Writing data to the array of data \mbox{\Hypertarget{class_vector4_d_acab7e69f40a1beb076f64be51aa58850}\label{class_vector4_d_acab7e69f40a1beb076f64be51aa58850}} 
+\index{Vector4D@{Vector4D}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Vector4D@{Vector4D}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const float \& Vector4\+D\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+Allows access to the vectors private data. Reading the data 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Matlibrary/matlib.\+h\end{DoxyCompactItemize}
