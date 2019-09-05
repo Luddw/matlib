@@ -242,6 +242,15 @@ public:
 			float y1, float y2, float y3, float y4,
 			float z1, float z2, float z3, float z4,
 			float w1, float w2, float w3, float w4);
+
+
+	
+
+	static Matrix4D RotX_axis(float angle); 
+	static Matrix4D RotY_axis(float angle);
+	static Matrix4D RotZ_axis(float angle);
+	static Matrix4D RotVect_axis(Vector4D vect, float angle);
+
 	/** 4x4 matrix multiplication with a 4x4 matrix
 	* @return a new matrix
 	*/
@@ -291,6 +300,8 @@ Matrix4D::Matrix4D()
 	this->_matrix_values[15] = 1;
 }
 
+
+
 Matrix4D::Matrix4D(float x1, float x2, float x3, float x4,
 					float y1, float y2, float y3, float y4,
 					float z1, float z2, float z3, float z4,
@@ -318,6 +329,45 @@ Matrix4D::Matrix4D(float x1, float x2, float x3, float x4,
 
 
 }
+
+Matrix4D Matrix4D::RotX_axis(float rad)
+{
+	
+	return Matrix4D(1,			0,			0,			0,
+					0,		 cos(rad), -sin(rad),		0,
+					0,		 sin(rad), cos(rad),		0,
+					0,		 0,			 0,				1);
+}
+Matrix4D Matrix4D::RotY_axis(float rad)
+{
+	return Matrix4D(cos(rad),	0,		sin(rad),	 0,
+					0,			1,			0,		 0,
+					-sin(rad), 0,	 cos(rad),		 0,
+					0,			0,			0,		 1);
+}
+Matrix4D Matrix4D::RotZ_axis(float rad)
+{
+	return Matrix4D(cos(rad), -sin(rad),	0,		 0,
+					sin(rad), cos(rad),   0,		 0,
+					0,			0,			1,		 0,
+					0,			0,			0,		 1);
+}
+
+Matrix4D Matrix4D::RotVect_axis(Vector4D vect,float rad)
+{
+	float co = cos(rad);
+	float tcos = 1 - cos(rad);
+	float si = sin(rad);
+	float x = vect[0];
+	float y = vect[1];
+	float z = vect[2];
+
+	return Matrix4D(co+x*x*tcos,	x*y*tcos-z*si,	x*z*tcos+y*si,	0,
+					y*x*tcos+z*si,	co+y*y*tcos,	y*z*tcos-x*si,	0,
+					z*x*tcos-y*si,	x*y*tcos+x*si,	co+z*z*tcos,	0,
+					0,				0,				0,				0);
+}
+
 
 Vector4D Matrix4D::operator*(const Vector4D& other)
 {
@@ -379,5 +429,7 @@ const float& Matrix4D::operator[] (int index) const
 		throw "INDEX OUT OF BOUNDS";
 	}
 }
+
+
 
 #undef A
