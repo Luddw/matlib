@@ -1,11 +1,8 @@
 #include "matlib.h"
+#include <iostream>
 
 int main() 
 {
-	Vector4D b(1, 2, 3, 1);
-	Matrix4D h;
-
-	b = b * 4;
-
-	return 0;
+	Matrix4D h(1, 1, 1, -1, 1, 1, -1, 1, 1, -1, 1, 1, -1, 1, 1, 1);
+	std::cout << h.Det();
 }

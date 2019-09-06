@@ -250,6 +250,11 @@ public:
 	static Matrix4D RotY_axis(float angle);
 	static Matrix4D RotZ_axis(float angle);
 	static Matrix4D RotVect_axis(Vector4D vect, float angle);
+	static Matrix4D Transpose(Matrix4D mat);
+
+	float Det();
+	Matrix4D Adjugate();
+	void Transpose();
 
 	/** 4x4 matrix multiplication with a 4x4 matrix
 	* @return a new matrix
@@ -270,6 +275,7 @@ public:
 
 
 private:
+	inline float det3x3();
 	float _matrix_values[16]; /*[ x1 y1 z1 w1 ]
 								[ x2 y2 z2 w2 ]
 								[ x3 y3 z3 w3 ]
@@ -352,7 +358,6 @@ Matrix4D Matrix4D::RotZ_axis(float rad)
 					0,			0,			1,		 0,
 					0,			0,			0,		 1);
 }
-
 Matrix4D Matrix4D::RotVect_axis(Vector4D vect,float rad)
 {
 	float co = cos(rad);
@@ -367,7 +372,136 @@ Matrix4D Matrix4D::RotVect_axis(Vector4D vect,float rad)
 					z*x*tcos-y*si,	x*y*tcos+x*si,	co+z*z*tcos,	0,
 					0,				0,				0,				0);
 }
+Matrix4D Matrix4D::Transpose(Matrix4D mat)
+{
+	mat[1] = mat[4];
+	mat[2] = mat[8];
+	mat[3] = mat[12];
 
+	mat[4] = mat[1];
+	mat[5] = mat[5];
+	mat[6] = mat[6];
+	mat[7] = mat[7];
+
+	mat[8] = mat[2];
+	mat[9] = mat[6];
+	mat[10] = mat[10];
+	mat[11] = mat[14];
+
+	mat[12] = mat[3];
+	mat[13] = mat[7];
+	mat[14] = mat[11];
+	mat[15] = mat[15];
+	return mat;
+}
+void Matrix4D::Transpose()
+{
+	this->A[1] = this->A[4];
+	this->A[2] = this->A[8];
+	this->A[3] = this->A[12];
+
+	this->A[4] = this->A[1];
+	this->A[5] = this->A[5];
+	this->A[6] = this->A[6];
+	this->A[7] = this->A[7];
+
+	this->A[8] = this->A[2];
+	this->A[9] = this->A[6];
+	this->A[10] = this->A[10];
+	this->A[11] = this->A[14];
+
+	this->A[12] = this->A[3];
+	this->A[13] = this->A[7];
+	this->A[14] = this->A[11];
+	this->A[15] = this->A[15];
+}
+
+float Matrix4D::Det()
+{
+	return
+		A[3] * A[6] * A[9] * A[12] - A[2] * A[7] * A[9] * A[12] -
+		A[3] * A[5] * A[10] * A[12] + A[1] * A[7] * A[10] * A[12] +
+		A[2] * A[5] * A[11] * A[12] - A[1] * A[6] * A[11] * A[12] -
+		A[3] * A[6] * A[8] * A[13] + A[2] * A[7] * A[8] * A[13] +
+		A[3] * A[4] * A[10] * A[13] - A[0] * A[7] * A[10] * A[13] -
+		A[2] * A[4] * A[11] * A[13] + A[0] * A[6] * A[11] * A[13] +
+		A[3] * A[5] * A[8] * A[14] - A[1] * A[7] * A[8] * A[14] -
+		A[3] * A[4] * A[9] * A[14] + A[0] * A[7] * A[9] * A[14] +
+		A[1] * A[4] * A[11] * A[14] - A[0] * A[5] * A[11] * A[14] -
+		A[2] * A[5] * A[8] * A[15] + A[1] * A[6] * A[8] * A[15] +
+		A[2] * A[4] * A[9] * A[15] - A[0] * A[6] * A[9] * A[15] -
+		A[1] * A[4] * A[10] * A[15] + A[0] * A[5] * A[10] * A[15];
+}
+
+Matrix4D Matrix4D::Adjugate()
+{
+
+	float det = this->Det;
+	if (det == 0)
+		return;
+
+	
+	float
+		submat1[9], submat2[9], submat3[9], submat4[9],
+		submat5[9], submat6[9], submat7[9], submat8[9],
+		submat9[9], submat10[9], submat11[9], submat12[9],
+		submat13[9], submat14[9], submat15[9], submat16[9];
+
+
+	float submat1[9] = { this->A[5], this->A[6], this->A[7],
+						this->A[9], this->A[10], this->A[11],
+						this->A[13], this->A[14], this->A[15] };
+	float submat2[9] = { this->A[4], this->A[6], this->A[7],
+					this->A[8], this->A[10], this->A[11],
+					this->A[12], this->A[14], this->A[15] };
+	float submat3[9] = { this->A[4], this->A[5], this->A[7],
+					this->A[8], this->A[9], this->A[11],
+					this->A[12], this->A[13], this->A[15] };
+	float submat4[9] = { this->A[4], this->A[5], this->A[6],
+					this->A[8], this->A[9], this->A[10],
+					this->A[12], this->A[13], this->A[14] };
+
+	float submat5[9] = { this->A[1], this->A[2], this->A[3],
+					this->A[9], this->A[10], this->A[11],
+					this->A[13], this->A[14], this->A[15] };
+	float submat6[9] = { this->A[0], this->A[2], this->A[3],
+					this->A[8], this->A[10], this->A[11],
+					this->A[12], this->A[14], this->A[15] };
+	float submat7[9] = { this->A[0], this->A[1], this->A[3],
+					this->A[8], this->A[9], this->A[11],
+					this->A[12], this->A[13], this->A[15] };
+	float submat8[9] = { this->A[0], this->A[1], this->A[2],
+					this->A[8], this->A[9], this->A[10],
+					this->A[12], this->A[13], this->A[14] };
+
+	float submat9[9] = { this->A[1], this->A[2], this->A[3],
+					this->A[5], this->A[6], this->A[7],
+					this->A[13], this->A[14], this->A[15] };
+	float submat10[9] = { this->A[0], this->A[2], this->A[3],
+					this->A[4], this->A[6], this->A[7],
+					this->A[12], this->A[14], this->A[15] };
+	float submat11[9] = { this->A[0], this->A[1], this->A[3],
+					this->A[4], this->A[5], this->A[7],
+					this->A[12], this->A[13], this->A[14] };
+	float submat12[9] = { this->A[0], this->A[1], this->A[2],
+					this->A[4], this->A[5], this->A[6],
+					this->A[12], this->A[13], this->A[14] };
+
+	float submat13[9] = { this->A[1], this->A[2], this->A[3],
+					this->A[5], this->A[6], this->A[7],
+					this->A[9], this->A[10], this->A[11] };
+	float submat14[9] = { this->A[0], this->A[2], this->A[3],
+					this->A[4], this->A[6], this->A[7],
+					this->A[8], this->A[10], this->A[11] };
+	float submat15[9] = { this->A[0], this->A[1], this->A[3],
+					this->A[4], this->A[5], this->A[7],
+					this->A[8], this->A[9], this->A[11] };
+	float submat16[9] = { this->A[0], this->A[1], this->A[2],
+					this->A[4], this->A[5], this->A[6],
+					this->A[8], this->A[9], this->A[10] };
+
+
+}
 
 Vector4D Matrix4D::operator*(const Vector4D& other)
 {
@@ -431,5 +565,11 @@ const float& Matrix4D::operator[] (int index) const
 }
 
 
+inline float det3x3(float submat[9])
+{
 
+	return submat[0] * (submat[4] * submat[8] - submat[5] * submat[7]) -
+			submat[1] * (submat[3] * submat[8] - submat[5] * submat[6]) + 
+			submat[2] * (submat[3] * submat[7] - submat[4] * submat[6]);
+}
 #undef A
