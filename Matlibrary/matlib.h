@@ -275,7 +275,7 @@ public:
 
 
 private:
-	inline float det3x3();
+	inline float det3x3(float submat[9]);
 	float _matrix_values[16]; /*[ x1 y1 z1 w1 ]
 								[ x2 y2 z2 w2 ]
 								[ x3 y3 z3 w3 ]
@@ -440,14 +440,6 @@ Matrix4D Matrix4D::Adjugate()
 	if (det == 0)
 		return;
 
-	
-	float
-		submat1[9], submat2[9], submat3[9], submat4[9],
-		submat5[9], submat6[9], submat7[9], submat8[9],
-		submat9[9], submat10[9], submat11[9], submat12[9],
-		submat13[9], submat14[9], submat15[9], submat16[9];
-
-
 	float submat1[9] = { this->A[5], this->A[6], this->A[7],
 						this->A[9], this->A[10], this->A[11],
 						this->A[13], this->A[14], this->A[15] };
@@ -500,7 +492,30 @@ Matrix4D Matrix4D::Adjugate()
 					this->A[4], this->A[5], this->A[6],
 					this->A[8], this->A[9], this->A[10] };
 
+	float x1, x2, x3, x4, y1, y2, y3, y4, z1, z2, z3, z4, w1, w2, w3, w4;
+	float detdiv = (1 / this->Det());
 
+	x1 = detdiv * Matrix4D::det3x3(submat1);
+	x2 = detdiv * Matrix4D::det3x3(submat2);
+	x3 = detdiv * Matrix4D::det3x3(submat3);
+	x4 = detdiv * Matrix4D::det3x3(submat4);
+
+	y1 = detdiv * Matrix4D::det3x3(submat5);
+	y2 = detdiv * Matrix4D::det3x3(submat6);
+	y3 = detdiv * Matrix4D::det3x3(submat7);
+	y4 = detdiv * Matrix4D::det3x3(submat8);
+
+	z1 = detdiv * Matrix4D::det3x3(submat9);
+	z2 = detdiv * Matrix4D::det3x3(submat10);
+	z3 = detdiv * Matrix4D::det3x3(submat11);
+	z4 = detdiv * Matrix4D::det3x3(submat12);
+
+	w1 = detdiv * Matrix4D::det3x3(submat13);
+	w2 = detdiv * Matrix4D::det3x3(submat14);
+	w3 = detdiv * Matrix4D::det3x3(submat15);
+	w4 = detdiv * Matrix4D::det3x3(submat16);
+
+	Matrix4D adj(x1, -x2, x3, -x4, -y1, y2, -y3, y4, z1, -z2, z3, -z4, -w1, w2, -w3, w4);
 }
 
 Vector4D Matrix4D::operator*(const Vector4D& other)
@@ -565,7 +580,7 @@ const float& Matrix4D::operator[] (int index) const
 }
 
 
-inline float det3x3(float submat[9])
+inline float Matrix4D::det3x3(float submat[9])
 {
 
 	return submat[0] * (submat[4] * submat[8] - submat[5] * submat[7]) -
