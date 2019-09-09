@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['matrix4d_3',['Matrix4D',['../class_matrix4_d.html',1,'']]]
+  ['lenghtof_4',['LenghtOf',['../class_vector4_d.html#ac519c2cb128da3b1250a14277d35057e',1,'Vector4D']]]
 ];

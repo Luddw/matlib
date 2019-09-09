@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Linear algebra library: Vector4D Class Reference</title>
+<title>Math Library: Vector4D Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,9 +29,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Linear algebra library
+   <div id="projectname">Math Library
    </div>
-   <div id="projectbrief">Math library for linear algebra in c++</div>
+   <div id="projectbrief">Math library for linear algebra</div>
   </td>
  </tr>
  </tbody>
@@ -98,8 +98,7 @@ $(document).ready(function(){initNavTree('class_vector4_d.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2b85bf633815254224596e09baa1a1ab"><td class="memItemLeft" align="right" valign="top"><a id="a2b85bf633815254224596e09baa1a1ab"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Vector4D</b> (float x, float y, float z, float w)</td></tr>
+<tr class="memitem:a2b85bf633815254224596e09baa1a1ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector4_d.html#a2b85bf633815254224596e09baa1a1ab">Vector4D</a> (float x, float y, float z, float w)</td></tr>
 <tr class="separator:a2b85bf633815254224596e09baa1a1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4171483447c2a46e53fccf8401b59b8"><td class="memItemLeft" align="right" valign="top"><a id="ac4171483447c2a46e53fccf8401b59b8"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Vector4D</b> (<a class="el" href="class_vector4_d.html">Vector4D</a> &amp;o)</td></tr>
@@ -131,7 +130,57 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A 4-dimensional homogenous vector </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2b85bf633815254224596e09baa1a1ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b85bf633815254224596e09baa1a1ab">&#9670;&nbsp;</a></span>Vector4D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector4D::Vector4D </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>costum construct for a 4D-vector </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>: x-value </td></tr>
+    <tr><td class="paramname">y</td><td>: y-value </td></tr>
+    <tr><td class="paramname">z</td><td>: z-value </td></tr>
+    <tr><td class="paramname">w</td><td>: w-value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad7742744afdc8545a19685c821b7ecee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad7742744afdc8545a19685c821b7ecee">&#9670;&nbsp;</a></span>CrossProduct()</h2>
 
@@ -147,8 +196,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Performs crossproduct with another vector</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Performs crossproduct with another vector </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vect4</td><td>: the 2nd vector used in the crossproduct </td></tr>
   </table>
@@ -173,8 +221,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Performs a dotproduction of two vectors</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Performs a dotproduction of two vectors </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vect4</td><td>: the 2nd vector used in the dotproduct </td></tr>
   </table>
@@ -198,8 +245,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Calculates the lenght of a vector</p>
-<dl class="section return"><dt>Returns</dt><dd>Returns the lenght of the vector </dd></dl>
+<p>Calculates the lenght of a vector </p><dl class="section return"><dt>Returns</dt><dd>Returns the lenght of the vector </dd></dl>
 
 </div>
 </div>
@@ -217,8 +263,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Normalizes the vector</p>
-<dl class="section return"><dt>Returns</dt><dd>Returns a new normalized vector </dd></dl>
+<p>Normalizes the vector </p><dl class="section return"><dt>Returns</dt><dd>Returns a new normalized vector </dd></dl>
 
 </div>
 </div>

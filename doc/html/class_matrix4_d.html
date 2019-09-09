@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Linear algebra library: Matrix4D Class Reference</title>
+<title>Math Library: Matrix4D Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,9 +29,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Linear algebra library
+   <div id="projectname">Math Library
    </div>
-   <div id="projectbrief">Math library for linear algebra in c++</div>
+   <div id="projectbrief">Math library for linear algebra</div>
   </td>
  </tr>
  </tbody>
@@ -88,6 +88,7 @@ $(document).ready(function(){initNavTree('class_matrix4_d.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_matrix4_d-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Matrix4D Class Reference</div>  </div>
@@ -98,23 +99,267 @@ $(document).ready(function(){initNavTree('class_matrix4_d.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a34aa591ae53c1486fe1896dc9cf6c01f"><td class="memItemLeft" align="right" valign="top"><a id="a34aa591ae53c1486fe1896dc9cf6c01f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix4D</b> (float x1, float x2, float x3, float x4, float y1, float y2, float y3, float y4, float z1, float z2, float z3, float z4, float w1, float w2, float w3, float w4)</td></tr>
+<tr class="memitem:a7cecf058dd181984d8ca7fee1423c6e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix4_d.html#a7cecf058dd181984d8ca7fee1423c6e2">Matrix4D</a> ()</td></tr>
+<tr class="separator:a7cecf058dd181984d8ca7fee1423c6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34aa591ae53c1486fe1896dc9cf6c01f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix4_d.html#a34aa591ae53c1486fe1896dc9cf6c01f">Matrix4D</a> (float x1, float x2, float x3, float x4, float y1, float y2, float y3, float y4, float z1, float z2, float z3, float z4, float w1, float w2, float w3, float w4)</td></tr>
 <tr class="separator:a34aa591ae53c1486fe1896dc9cf6c01f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd2dbe7f3ed9067860dfebb499aa29bf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix4_d.html#acd2dbe7f3ed9067860dfebb499aa29bf">Det</a> ()</td></tr>
+<tr class="separator:acd2dbe7f3ed9067860dfebb499aa29bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1cda67689fd449ef47811ea3dd64076"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix4_d.html">Matrix4D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix4_d.html#ae1cda67689fd449ef47811ea3dd64076">Inverse</a> ()</td></tr>
+<tr class="separator:ae1cda67689fd449ef47811ea3dd64076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad244df12db322a21e6d97119be75a92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix4_d.html#aad244df12db322a21e6d97119be75a92">Transpose</a> ()</td></tr>
+<tr class="separator:aad244df12db322a21e6d97119be75a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8afb58a49d02aef3ece8ebaee20f1c68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix4_d.html">Matrix4D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix4_d.html#a8afb58a49d02aef3ece8ebaee20f1c68">operator*</a> (const <a class="el" href="class_matrix4_d.html">Matrix4D</a> &amp;other)</td></tr>
 <tr class="separator:a8afb58a49d02aef3ece8ebaee20f1c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa93360dddec797a329e8d88652648485"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix4_d.html">Matrix4D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix4_d.html#aa93360dddec797a329e8d88652648485">operator*</a> (const float &amp;other)</td></tr>
+<tr class="separator:aa93360dddec797a329e8d88652648485"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d1435ba485ca404b9cbd29c31e3ee1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector4_d.html">Vector4D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix4_d.html#a7d1435ba485ca404b9cbd29c31e3ee1c">operator*</a> (const <a class="el" href="class_vector4_d.html">Vector4D</a> &amp;other)</td></tr>
 <tr class="separator:a7d1435ba485ca404b9cbd29c31e3ee1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abce7f730005c77125b40a6689f17d450"><td class="memItemLeft" align="right" valign="top">float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix4_d.html#abce7f730005c77125b40a6689f17d450">operator[]</a> (int index)</td></tr>
 <tr class="separator:abce7f730005c77125b40a6689f17d450"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fec3b8fb1d9c99ea51d419d7c0d88c2"><td class="memItemLeft" align="right" valign="top">const float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix4_d.html#a6fec3b8fb1d9c99ea51d419d7c0d88c2">operator[]</a> (int index) const</td></tr>
 <tr class="separator:a6fec3b8fb1d9c99ea51d419d7c0d88c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:aac93e1ed2da785b8938ce2178b107953"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_matrix4_d.html">Matrix4D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix4_d.html#aac93e1ed2da785b8938ce2178b107953">RotX_axis</a> (float angle)</td></tr>
+<tr class="separator:aac93e1ed2da785b8938ce2178b107953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4eec3f0505ae8e31c634640e32bb18c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_matrix4_d.html">Matrix4D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix4_d.html#af4eec3f0505ae8e31c634640e32bb18c">RotY_axis</a> (float angle)</td></tr>
+<tr class="separator:af4eec3f0505ae8e31c634640e32bb18c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbbd73ab042791fbabcc30e2b8df157a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_matrix4_d.html">Matrix4D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix4_d.html#acbbd73ab042791fbabcc30e2b8df157a">RotZ_axis</a> (float angle)</td></tr>
+<tr class="separator:acbbd73ab042791fbabcc30e2b8df157a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e9471b613f05302b8f6ca3d1a1af576"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_matrix4_d.html">Matrix4D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix4_d.html#a6e9471b613f05302b8f6ca3d1a1af576">RotVect_axis</a> (<a class="el" href="class_vector4_d.html">Vector4D</a> vect, float angle)</td></tr>
+<tr class="separator:a6e9471b613f05302b8f6ca3d1a1af576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68a6c54477ce343da72273faa310fb99"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_matrix4_d.html">Matrix4D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix4_d.html#a68a6c54477ce343da72273faa310fb99">Transpose</a> (<a class="el" href="class_matrix4_d.html">Matrix4D</a> mat)</td></tr>
+<tr class="separator:a68a6c54477ce343da72273faa310fb99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea78f6fd4241ec1870f6b763f1e43957"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_matrix4_d.html">Matrix4D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix4_d.html#aea78f6fd4241ec1870f6b763f1e43957">Inverse</a> (<a class="el" href="class_matrix4_d.html">Matrix4D</a> mat)</td></tr>
+<tr class="separator:aea78f6fd4241ec1870f6b763f1e43957"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A 4-dimensional homogenous matrix </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a7cecf058dd181984d8ca7fee1423c6e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cecf058dd181984d8ca7fee1423c6e2">&#9670;&nbsp;</a></span>Matrix4D() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix4D::Matrix4D </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Default construct, creates a 4x4 identity matrix </p>
+
+</div>
+</div>
+<a id="a34aa591ae53c1486fe1896dc9cf6c01f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34aa591ae53c1486fe1896dc9cf6c01f">&#9670;&nbsp;</a></span>Matrix4D() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix4D::Matrix4D </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>w1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>w2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>w3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>w4</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Custom constructor for a 4x4 matrix </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="acd2dbe7f3ed9067860dfebb499aa29bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd2dbe7f3ed9067860dfebb499aa29bf">&#9670;&nbsp;</a></span>Det()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Matrix4D::Det </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Calculates the determinant of a 4x4 matrix </p><dl class="section return"><dt>Returns</dt><dd>Determinant as a float </dd></dl>
+
+</div>
+</div>
+<a id="ae1cda67689fd449ef47811ea3dd64076"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1cda67689fd449ef47811ea3dd64076">&#9670;&nbsp;</a></span>Inverse() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix4_d.html">Matrix4D</a> Matrix4D::Inverse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Calculates the inverse of a 4x4 matrix </p><dl class="section return"><dt>Returns</dt><dd>A New matrix which is the inverse of matrix calling the method. </dd></dl>
+
+</div>
+</div>
+<a id="aea78f6fd4241ec1870f6b763f1e43957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea78f6fd4241ec1870f6b763f1e43957">&#9670;&nbsp;</a></span>Inverse() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix4_d.html">Matrix4D</a> Matrix4D::Inverse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_matrix4_d.html">Matrix4D</a>&#160;</td>
+          <td class="paramname"><em>mat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Static member function That calculates the inverse of the given matrix </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>inverse of the matrix </dd></dl>
+
+</div>
+</div>
+<a id="aa93360dddec797a329e8d88652648485"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa93360dddec797a329e8d88652648485">&#9670;&nbsp;</a></span>operator*() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix4_d.html">Matrix4D</a> Matrix4D::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Operator overloading, allowing scalar with a float and 4x4 matrix </p><dl class="section return"><dt>Returns</dt><dd>A new matrix with the cells multiplied with the given float. </dd></dl>
+
+</div>
+</div>
 <a id="a8afb58a49d02aef3ece8ebaee20f1c68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8afb58a49d02aef3ece8ebaee20f1c68">&#9670;&nbsp;</a></span>operator*() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8afb58a49d02aef3ece8ebaee20f1c68">&#9670;&nbsp;</a></span>operator*() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -128,13 +373,12 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>4x4 matrix multiplication with a 4x4 matrix </p><dl class="section return"><dt>Returns</dt><dd>a new matrix</dd></dl>
-<p>4x4 matrix multiplication with another 4x4 matrix </p>
+<p>4x4 matrix multiplication with a 4x4 matrix </p><dl class="section return"><dt>Returns</dt><dd>a new matrix </dd></dl>
 
 </div>
 </div>
 <a id="a7d1435ba485ca404b9cbd29c31e3ee1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d1435ba485ca404b9cbd29c31e3ee1c">&#9670;&nbsp;</a></span>operator*() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d1435ba485ca404b9cbd29c31e3ee1c">&#9670;&nbsp;</a></span>operator*() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -187,6 +431,200 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>allows access to the matrixs private data, writing </p>
+
+</div>
+</div>
+<a id="a6e9471b613f05302b8f6ca3d1a1af576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e9471b613f05302b8f6ca3d1a1af576">&#9670;&nbsp;</a></span>RotVect_axis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix4_d.html">Matrix4D</a> Matrix4D::RotVect_axis </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector4_d.html">Vector4D</a>&#160;</td>
+          <td class="paramname"><em>vect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>static member function that creates a Rotation Matrix for a vectors axis </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>: the angle in radians </td></tr>
+    <tr><td class="paramname">vect</td><td>: vector which axis is rotated around </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rotation matrix around the given vector </dd></dl>
+
+</div>
+</div>
+<a id="aac93e1ed2da785b8938ce2178b107953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac93e1ed2da785b8938ce2178b107953">&#9670;&nbsp;</a></span>RotX_axis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix4_d.html">Matrix4D</a> Matrix4D::RotX_axis </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>static member function that creates a Rotation Matrix for the X-axis </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>: the angle in radians </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rotation matrix around the x axis </dd></dl>
+
+</div>
+</div>
+<a id="af4eec3f0505ae8e31c634640e32bb18c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4eec3f0505ae8e31c634640e32bb18c">&#9670;&nbsp;</a></span>RotY_axis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix4_d.html">Matrix4D</a> Matrix4D::RotY_axis </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>static member function that creates a Rotation Matrix for the X-axis </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>: the angle in radians </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rotation matrix around the x axis </dd></dl>
+
+</div>
+</div>
+<a id="acbbd73ab042791fbabcc30e2b8df157a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbbd73ab042791fbabcc30e2b8df157a">&#9670;&nbsp;</a></span>RotZ_axis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix4_d.html">Matrix4D</a> Matrix4D::RotZ_axis </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>static member function that creates a Rotation Matrix for the Z-axis </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>: the angle in radians </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rotation matrix around the Z-axis </dd></dl>
+
+</div>
+</div>
+<a id="aad244df12db322a21e6d97119be75a92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad244df12db322a21e6d97119be75a92">&#9670;&nbsp;</a></span>Transpose() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix4D::Transpose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Changes the matrix into it's transpose </p>
+
+</div>
+</div>
+<a id="a68a6c54477ce343da72273faa310fb99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68a6c54477ce343da72273faa310fb99">&#9670;&nbsp;</a></span>Transpose() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix4_d.html">Matrix4D</a> Matrix4D::Transpose </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_matrix4_d.html">Matrix4D</a>&#160;</td>
+          <td class="paramname"><em>mat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>static member function that calculates the transpose of a given matrix </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mat</td><td>: matrix to transpose </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Transposed matrix </dd></dl>
 
 </div>
 </div>

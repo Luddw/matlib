@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lenghtof_2',['LenghtOf',['../class_vector4_d.html#ac519c2cb128da3b1250a14277d35057e',1,'Vector4D']]]
+  ['inverse_3',['Inverse',['../class_matrix4_d.html#aea78f6fd4241ec1870f6b763f1e43957',1,'Matrix4D::Inverse(Matrix4D mat)'],['../class_matrix4_d.html#ae1cda67689fd449ef47811ea3dd64076',1,'Matrix4D::Inverse()']]]
 ];

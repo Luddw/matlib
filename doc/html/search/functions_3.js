@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normalize_18',['Normalize',['../class_vector4_d.html#a2f6228b8ae7a6944bbf32f3b6a3cbd3f',1,'Vector4D']]]
+  ['lenghtof_26',['LenghtOf',['../class_vector4_d.html#ac519c2cb128da3b1250a14277d35057e',1,'Vector4D']]]
 ];

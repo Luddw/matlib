@@ -3,6 +3,13 @@
 
 int main() 
 {
-	Matrix4D h(1, 1, 1, -1, 1, 1, -1, 1, 1, -1, 1, 1, -1, 1, 1, 1);
-	std::cout << h.Det();
+	Matrix4D h(1, 1, 1, -1, 
+				1, 1, -1, 1, 
+				1, -1, 1, 1,
+				-1, 1, 1, 1);
+	Matrix4D l;
+
+	l = Matrix4D::Inverse(h);
+	l = l * h;
+	l = l * h;
 }

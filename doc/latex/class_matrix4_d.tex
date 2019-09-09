@@ -7,10 +7,19 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_matrix4_d_a34aa591ae53c1486fe1896dc9cf6c01f}\label{class_matrix4_d_a34aa591ae53c1486fe1896dc9cf6c01f}} 
-{\bfseries Matrix4D} (float x1, float x2, float x3, float x4, float y1, float y2, float y3, float y4, float z1, float z2, float z3, float z4, float w1, float w2, float w3, float w4)
+\mbox{\hyperlink{class_matrix4_d_a7cecf058dd181984d8ca7fee1423c6e2}{Matrix4D}} ()
+\item 
+\mbox{\hyperlink{class_matrix4_d_a34aa591ae53c1486fe1896dc9cf6c01f}{Matrix4D}} (float x1, float x2, float x3, float x4, float y1, float y2, float y3, float y4, float z1, float z2, float z3, float z4, float w1, float w2, float w3, float w4)
+\item 
+float \mbox{\hyperlink{class_matrix4_d_acd2dbe7f3ed9067860dfebb499aa29bf}{Det}} ()
+\item 
+\mbox{\hyperlink{class_matrix4_d}{Matrix4D}} \mbox{\hyperlink{class_matrix4_d_ae1cda67689fd449ef47811ea3dd64076}{Inverse}} ()
+\item 
+void \mbox{\hyperlink{class_matrix4_d_aad244df12db322a21e6d97119be75a92}{Transpose}} ()
 \item 
 \mbox{\hyperlink{class_matrix4_d}{Matrix4D}} \mbox{\hyperlink{class_matrix4_d_a8afb58a49d02aef3ece8ebaee20f1c68}{operator$\ast$}} (const \mbox{\hyperlink{class_matrix4_d}{Matrix4D}} \&other)
+\item 
+\mbox{\hyperlink{class_matrix4_d}{Matrix4D}} \mbox{\hyperlink{class_matrix4_d_aa93360dddec797a329e8d88652648485}{operator$\ast$}} (const float \&other)
 \item 
 \mbox{\hyperlink{class_vector4_d}{Vector4D}} \mbox{\hyperlink{class_matrix4_d_a7d1435ba485ca404b9cbd29c31e3ee1c}{operator$\ast$}} (const \mbox{\hyperlink{class_vector4_d}{Vector4D}} \&other)
 \item 
@@ -18,25 +27,96 @@ float \& \mbox{\hyperlink{class_matrix4_d_abce7f730005c77125b40a6689f17d450}{ope
 \item 
 const float \& \mbox{\hyperlink{class_matrix4_d_a6fec3b8fb1d9c99ea51d419d7c0d88c2}{operator\mbox{[}$\,$\mbox{]}}} (int index) const
 \end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_matrix4_d}{Matrix4D}} \mbox{\hyperlink{class_matrix4_d_aac93e1ed2da785b8938ce2178b107953}{Rot\+X\+\_\+axis}} (float angle)
+\item 
+static \mbox{\hyperlink{class_matrix4_d}{Matrix4D}} \mbox{\hyperlink{class_matrix4_d_af4eec3f0505ae8e31c634640e32bb18c}{Rot\+Y\+\_\+axis}} (float angle)
+\item 
+static \mbox{\hyperlink{class_matrix4_d}{Matrix4D}} \mbox{\hyperlink{class_matrix4_d_acbbd73ab042791fbabcc30e2b8df157a}{Rot\+Z\+\_\+axis}} (float angle)
+\item 
+static \mbox{\hyperlink{class_matrix4_d}{Matrix4D}} \mbox{\hyperlink{class_matrix4_d_a6e9471b613f05302b8f6ca3d1a1af576}{Rot\+Vect\+\_\+axis}} (\mbox{\hyperlink{class_vector4_d}{Vector4D}} vect, float angle)
+\item 
+static \mbox{\hyperlink{class_matrix4_d}{Matrix4D}} \mbox{\hyperlink{class_matrix4_d_a68a6c54477ce343da72273faa310fb99}{Transpose}} (\mbox{\hyperlink{class_matrix4_d}{Matrix4D}} mat)
+\item 
+static \mbox{\hyperlink{class_matrix4_d}{Matrix4D}} \mbox{\hyperlink{class_matrix4_d_aea78f6fd4241ec1870f6b763f1e43957}{Inverse}} (\mbox{\hyperlink{class_matrix4_d}{Matrix4D}} mat)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 A 4-\/dimensional homogenous matrix 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_matrix4_d_a7cecf058dd181984d8ca7fee1423c6e2}\label{class_matrix4_d_a7cecf058dd181984d8ca7fee1423c6e2}} 
+\index{Matrix4D@{Matrix4D}!Matrix4D@{Matrix4D}}
+\index{Matrix4D@{Matrix4D}!Matrix4D@{Matrix4D}}
+\doxysubsubsection{\texorpdfstring{Matrix4D()}{Matrix4D()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Matrix4\+D\+::\+Matrix4D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default construct, creates a 4x4 identity matrix \mbox{\Hypertarget{class_matrix4_d_a34aa591ae53c1486fe1896dc9cf6c01f}\label{class_matrix4_d_a34aa591ae53c1486fe1896dc9cf6c01f}} 
+\index{Matrix4D@{Matrix4D}!Matrix4D@{Matrix4D}}
+\index{Matrix4D@{Matrix4D}!Matrix4D@{Matrix4D}}
+\doxysubsubsection{\texorpdfstring{Matrix4D()}{Matrix4D()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Matrix4\+D\+::\+Matrix4D (\begin{DoxyParamCaption}\item[{float}]{x1,  }\item[{float}]{x2,  }\item[{float}]{x3,  }\item[{float}]{x4,  }\item[{float}]{y1,  }\item[{float}]{y2,  }\item[{float}]{y3,  }\item[{float}]{y4,  }\item[{float}]{z1,  }\item[{float}]{z2,  }\item[{float}]{z3,  }\item[{float}]{z4,  }\item[{float}]{w1,  }\item[{float}]{w2,  }\item[{float}]{w3,  }\item[{float}]{w4 }\end{DoxyParamCaption})}
+
+Custom constructor for a 4x4 matrix 
+
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_matrix4_d_acd2dbe7f3ed9067860dfebb499aa29bf}\label{class_matrix4_d_acd2dbe7f3ed9067860dfebb499aa29bf}} 
+\index{Matrix4D@{Matrix4D}!Det@{Det}}
+\index{Det@{Det}!Matrix4D@{Matrix4D}}
+\doxysubsubsection{\texorpdfstring{Det()}{Det()}}
+{\footnotesize\ttfamily float Matrix4\+D\+::\+Det (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calculates the determinant of a 4x4 matrix \begin{DoxyReturn}{Returns}
+Determinant as a float 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matrix4_d_ae1cda67689fd449ef47811ea3dd64076}\label{class_matrix4_d_ae1cda67689fd449ef47811ea3dd64076}} 
+\index{Matrix4D@{Matrix4D}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!Matrix4D@{Matrix4D}}
+\doxysubsubsection{\texorpdfstring{Inverse()}{Inverse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix4_d}{Matrix4D}} Matrix4\+D\+::\+Inverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calculates the inverse of a 4x4 matrix \begin{DoxyReturn}{Returns}
+A New matrix which is the inverse of matrix calling the method. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matrix4_d_aea78f6fd4241ec1870f6b763f1e43957}\label{class_matrix4_d_aea78f6fd4241ec1870f6b763f1e43957}} 
+\index{Matrix4D@{Matrix4D}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!Matrix4D@{Matrix4D}}
+\doxysubsubsection{\texorpdfstring{Inverse()}{Inverse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix4_d}{Matrix4D}} Matrix4\+D\+::\+Inverse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix4_d}{Matrix4D}}}]{mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Static member function That calculates the inverse of the given matrix 
+\begin{DoxyParams}{Parameters}
+{\em matrix} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+inverse of the matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matrix4_d_aa93360dddec797a329e8d88652648485}\label{class_matrix4_d_aa93360dddec797a329e8d88652648485}} 
+\index{Matrix4D@{Matrix4D}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Matrix4D@{Matrix4D}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix4_d}{Matrix4D}} Matrix4\+D\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const float \&}]{other }\end{DoxyParamCaption})}
+
+Operator overloading, allowing scalar with a float and 4x4 matrix \begin{DoxyReturn}{Returns}
+A new matrix with the cells multiplied with the given float. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_matrix4_d_a8afb58a49d02aef3ece8ebaee20f1c68}\label{class_matrix4_d_a8afb58a49d02aef3ece8ebaee20f1c68}} 
 \index{Matrix4D@{Matrix4D}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!Matrix4D@{Matrix4D}}
-\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_matrix4_d}{Matrix4D}} Matrix4\+D\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_matrix4_d}{Matrix4D}} \&}]{other }\end{DoxyParamCaption})}
 
 4x4 matrix multiplication with a 4x4 matrix \begin{DoxyReturn}{Returns}
-a new matrix
+a new matrix 
 \end{DoxyReturn}
-4x4 matrix multiplication with another 4x4 matrix \mbox{\Hypertarget{class_matrix4_d_a7d1435ba485ca404b9cbd29c31e3ee1c}\label{class_matrix4_d_a7d1435ba485ca404b9cbd29c31e3ee1c}} 
+\mbox{\Hypertarget{class_matrix4_d_a7d1435ba485ca404b9cbd29c31e3ee1c}\label{class_matrix4_d_a7d1435ba485ca404b9cbd29c31e3ee1c}} 
 \index{Matrix4D@{Matrix4D}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!Matrix4D@{Matrix4D}}
-\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_vector4_d}{Vector4D}} Matrix4\+D\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector4_d}{Vector4D}} \&}]{other }\end{DoxyParamCaption})}
 
 4x4 matrix multiplication with a 4D vector \begin{DoxyReturn}{Returns}
@@ -54,7 +134,85 @@ allows access to the matrixs private data, reading \mbox{\Hypertarget{class_matr
 \doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily const float \& Matrix4\+D\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
 
-allows access to the matrixs private data, writing 
+allows access to the matrixs private data, writing \mbox{\Hypertarget{class_matrix4_d_a6e9471b613f05302b8f6ca3d1a1af576}\label{class_matrix4_d_a6e9471b613f05302b8f6ca3d1a1af576}} 
+\index{Matrix4D@{Matrix4D}!RotVect\_axis@{RotVect\_axis}}
+\index{RotVect\_axis@{RotVect\_axis}!Matrix4D@{Matrix4D}}
+\doxysubsubsection{\texorpdfstring{RotVect\_axis()}{RotVect\_axis()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix4_d}{Matrix4D}} Matrix4\+D\+::\+Rot\+Vect\+\_\+axis (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector4_d}{Vector4D}}}]{vect,  }\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+static member function that creates a Rotation Matrix for a vectors axis 
+\begin{DoxyParams}{Parameters}
+{\em angle} & \+: the angle in radians \\
+\hline
+{\em vect} & \+: vector which axis is rotated around \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rotation matrix around the given vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matrix4_d_aac93e1ed2da785b8938ce2178b107953}\label{class_matrix4_d_aac93e1ed2da785b8938ce2178b107953}} 
+\index{Matrix4D@{Matrix4D}!RotX\_axis@{RotX\_axis}}
+\index{RotX\_axis@{RotX\_axis}!Matrix4D@{Matrix4D}}
+\doxysubsubsection{\texorpdfstring{RotX\_axis()}{RotX\_axis()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix4_d}{Matrix4D}} Matrix4\+D\+::\+Rot\+X\+\_\+axis (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+static member function that creates a Rotation Matrix for the X-\/axis 
+\begin{DoxyParams}{Parameters}
+{\em angle} & \+: the angle in radians \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rotation matrix around the x axis 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matrix4_d_af4eec3f0505ae8e31c634640e32bb18c}\label{class_matrix4_d_af4eec3f0505ae8e31c634640e32bb18c}} 
+\index{Matrix4D@{Matrix4D}!RotY\_axis@{RotY\_axis}}
+\index{RotY\_axis@{RotY\_axis}!Matrix4D@{Matrix4D}}
+\doxysubsubsection{\texorpdfstring{RotY\_axis()}{RotY\_axis()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix4_d}{Matrix4D}} Matrix4\+D\+::\+Rot\+Y\+\_\+axis (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+static member function that creates a Rotation Matrix for the X-\/axis 
+\begin{DoxyParams}{Parameters}
+{\em angle} & \+: the angle in radians \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rotation matrix around the x axis 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matrix4_d_acbbd73ab042791fbabcc30e2b8df157a}\label{class_matrix4_d_acbbd73ab042791fbabcc30e2b8df157a}} 
+\index{Matrix4D@{Matrix4D}!RotZ\_axis@{RotZ\_axis}}
+\index{RotZ\_axis@{RotZ\_axis}!Matrix4D@{Matrix4D}}
+\doxysubsubsection{\texorpdfstring{RotZ\_axis()}{RotZ\_axis()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix4_d}{Matrix4D}} Matrix4\+D\+::\+Rot\+Z\+\_\+axis (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+static member function that creates a Rotation Matrix for the Z-\/axis 
+\begin{DoxyParams}{Parameters}
+{\em angle} & \+: the angle in radians \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rotation matrix around the Z-\/axis 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matrix4_d_aad244df12db322a21e6d97119be75a92}\label{class_matrix4_d_aad244df12db322a21e6d97119be75a92}} 
+\index{Matrix4D@{Matrix4D}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!Matrix4D@{Matrix4D}}
+\doxysubsubsection{\texorpdfstring{Transpose()}{Transpose()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Matrix4\+D\+::\+Transpose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Changes the matrix into it\textquotesingle{}s transpose \mbox{\Hypertarget{class_matrix4_d_a68a6c54477ce343da72273faa310fb99}\label{class_matrix4_d_a68a6c54477ce343da72273faa310fb99}} 
+\index{Matrix4D@{Matrix4D}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!Matrix4D@{Matrix4D}}
+\doxysubsubsection{\texorpdfstring{Transpose()}{Transpose()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_matrix4_d}{Matrix4D}} Matrix4\+D\+::\+Transpose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix4_d}{Matrix4D}}}]{mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+static member function that calculates the transpose of a given matrix 
+\begin{DoxyParams}{Parameters}
+{\em mat} & \+: matrix to transpose \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Transposed matrix 
+\end{DoxyReturn}
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
